@@ -1,5 +1,7 @@
 #include <iostream>
 #include <fstream>
+#include <stdlib.h>
+#include <sstream> 
 using namespace std;
 
 
@@ -27,16 +29,33 @@ int main() {
     while(1){
 	
        string num;
-
+       stringstream ss;
+		int i = 0;
        cout << "請輸入中文數字(小於等於10^7): ";
        cin >> num;
     
-       
+	  
+	  ss<<spellnum(num);
+	  
+	  ss>>i;
+	  
+	  if(i<10000000)
+	  {
+	  	 cout<<i<<endl;
+	  }
+	  else{
+	  	cout<<"error"<<endl;
+	  }
+	  
+	  
+	  
+	  	  
+	 
+	  
+	    
+	    
 	   
-	  cout << spellnum(num) << endl;
-	   
-	   
-}
+    }
 
     return 0;
 }
